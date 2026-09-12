@@ -21,7 +21,7 @@ router.post('/', async (req, res)=>{
         const savedContact = await newContact.save();
         res.status(201).json(savedContact);
     } catch (error){
-        res.status(400).json({message: errror.message});
+        res.status(400).json({message: error.message});
     }
 });
 
